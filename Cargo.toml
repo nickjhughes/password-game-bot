@@ -1,0 +1,56 @@
+[package]
+name = "password-game-bot"
+version = "0.1.0"
+authors = ["Nick Hughes <nickjhughes@gmail.com>"]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+description = "A bot to beat https://neal.fun/password-game/"
+repository = "https://github.com/nickjhughes/password-game-bot.git"
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+[[bin]]
+name = "youtube"
+path = "src/youtube/main.rs"
+
+[dependencies]
+cached = "0.44"
+chrono = "0.4"
+chrono-tz = "0.8"
+headless_chrome = { git = "https://github.com/nickjhughes/rust-headless-chrome.git", branch = "press-key-with-modifiers" }
+isocountry = "0.3"
+iso8601-duration = "0.2"
+lazy_static = "1.4"
+numerals = "0.1"
+ordered-float = "3.0"
+periodic_table = "0.4"
+pleco = "0.5"
+rand = "0.8"
+reqwest = { version = "0.11", features = ["blocking"] }
+reverse_geocoder = "3.0"
+scraper = "0.17"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_plain = "1.0"
+strum = { version = "0.25", features = ["derive"] }
+suncalc = "0.4"
+svg = "0.13"
+unicode-segmentation = "1.10"
+windows = { version = "0.48", features = [
+    "Win32_Foundation",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_Input_KeyboardAndMouse"
+] }
+base64 = "0.21"
+urlencoding = "2.1"
+env_logger = "0.10"
+log = "0.4"
+lazy-regex = "3.0"
+thiserror = "1.0"
+anyhow = "1.0"
+ego-tree = "0.6"
+lightningcss = "1.0.0-alpha.44"
+derivative = "2.2"
